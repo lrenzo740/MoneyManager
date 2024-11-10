@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Manager - Manage Money</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Button -->
+        <button onclick="goHome()" class="home-btn">Back to Home</button>
+        
+        <h2>Money Manager</h2>
+        
+        <!-- Transaction Form -->
+        <form id="transaction-form">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Description" required>
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Amount" required>
+
+            <label for="transaction-type">Type</label>
+            <select id="transaction-type" required>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <button type="submit" class="button">Add Transaction</button>
+        </form>
+        
+        <!-- Success Message -->
+        <div id="success-message" class="success-msg" style="display: none;">
+            Transaction added successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Function to redirect to the home page
+        function goHome() {
+            window.location.href = 'index.html';  // Adjust this to the actual home page URL
+        }
+
+        // Handle form submission
+        document.getElementById("transaction-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent page reload
+
+            // Display success message
+            document.getElementById("success-message").style.display = "block";
+            
+            // Hide success message after 3 seconds
+            setTimeout(function() {
+                document.getElementById("success-message").style.display = "none";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

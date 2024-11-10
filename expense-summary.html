@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Manager - Expense Summary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Button -->
+        <button onclick="goHome()" class="home-btn">Back to Home</button>
+        
+        <h2>Expense Summary</h2>
+        <div id="expense-summary" class="expenses">
+            <div id="summary-details">
+                <!-- This will contain the income, expense, and net balance -->
+            </div>
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Function to redirect to the home page
+        function goHome() {
+            window.location.href = 'index.html';  // Adjust this to the actual home page URL
+        }
+    </script>
+</body>
+</html>

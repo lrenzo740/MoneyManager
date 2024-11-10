@@ -1,0 +1,145 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffe6f2;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;  /* Centers container horizontally */
+}
+
+.header, .footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #ff66b2;
+    width: 70%; /* 50% width of its container */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin: 15px auto; /* Centers the button horizontally */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.button:hover {
+    background-color: #ff3c96;
+    transform: scale(1.05);
+}
+
+.balance-info, .transaction {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction span {
+    color: black;
+}
+
+/* Modernized input fields - Centering the text input only */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    max-width: 300px; /* Limit input field width */
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: auto;  /* Centers input fields horizontally */
+    margin-right: auto; /* Centers input fields horizontally */
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #ff66b2;
+    box-shadow: 0 0 8px rgba(255, 102, 178, 0.2);
+    outline: none;
+}
+
+/* Labels */
+label {
+    font-size: 0.9em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Page title */
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Transaction item colors based on type */
+.transaction span.income {
+    color: green;
+}
+
+.transaction span.expense {
+    color: red;
+}
+
+/* Home button styles */
+.home-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    /* Explicitly align the Home button to the left */
+    display: inline-block; /* Makes the button an inline block */
+    margin-left: 0;  /* Ensure the home button is aligned left */
+}
+
+/* Hover effect for home button */
+.home-btn:hover {
+    background-color: #45a049;
+}
+
+/* Ensure responsiveness for smaller devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        box-shadow: none; /* Remove shadow for small screens */
+    }
+
+    .button, .home-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+}
