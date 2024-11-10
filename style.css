@@ -30,6 +30,7 @@ body {
 .button {
     background-color: #ff66b2;
     width: 50%; /* 50% width of its container */
+    max-width: 300px; /* Ensure it doesn't exceed a reasonable width */
     color: white;
     padding: 12px 20px;
     border-radius: 10px;
@@ -42,6 +43,22 @@ body {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+@media (max-width: 768px) {
+    .button {
+        width: 80%; /* Increase the width for medium-sized screens */
+        padding: 10px 18px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Slightly reduce font size */
+    }
+}
+
+@media (max-width: 375px) {
+    .button {
+        width: 90%; /* Ensure the button takes up most of the width on small screens */
+        font-size: 0.85em; /* Slightly smaller font size for very small screens */
+    }
+}
+
 
 
 .button:hover {
@@ -66,7 +83,7 @@ body {
 /* Modernized input fields - Centering the text input only */
 input[type="text"], input[type="number"], select {
     width: 100%;
-    max-width: 300px; /* Limit input field width */
+    max-width: 200px; /* Limit input field width */
     padding: 10px;
     margin-top: 8px;
     margin-bottom: 15px;
@@ -132,14 +149,4 @@ h2 {
 }
 
 /* Ensure responsiveness for smaller devices */
-@media (max-width: 480px) {
-    .container {
-        padding: 15px;
-        box-shadow: none; /* Remove shadow for small screens */
-    }
 
-    .button, .home-btn {
-        width: 100%;
-        font-size: 14px;
-    }
-}
