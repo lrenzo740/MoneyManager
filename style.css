@@ -1,4 +1,3 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -6,8 +5,8 @@ body {
     padding: 20px;
     color: #333;
     display: flex;
-    justify-content: center;  /* Centers content horizontally */
-    align-items: center;      /* Centers content vertically */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     text-align: center;
 }
@@ -19,7 +18,7 @@ body {
     background-color: #ffe6f2;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;  /* Centers container horizontally */
+    margin: 0 auto;
 }
 
 .header, .footer {
@@ -28,42 +27,43 @@ body {
 }
 
 .button {
-    background-color: #ff66b2;
-    width: 50%; /* 50% width of its container */
-    max-width: 300px; /* Ensure it doesn't exceed a reasonable width */
-    color: white;
+    background-color: #ff80bf;
+    width: 80%; 
+    max-width: 300px;
+    color: #fff;
     padding: 12px 20px;
-    border-radius: 10px;
+    border: 2px solid #ff66b2;
+    border-radius: 20px;
     text-align: center;
     display: block;
-    margin: 15px auto; /* Centers the button horizontally */
+    margin: 15px auto;
     text-decoration: none;
-    border: none;
-    cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #ff4d94;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
     .button {
-        width: 80%; /* Increase the width for medium-sized screens */
-        padding: 10px 18px; /* Adjust padding for smaller screens */
-        font-size: 0.9em; /* Slightly reduce font size */
+        width: 80%;
+        padding: 10px 18px;
+        font-size: 0.9em;
     }
 }
 
 @media (max-width: 375px) {
     .button {
-        width: 90%; /* Ensure the button takes up most of the width on small screens */
-        font-size: 0.85em; /* Slightly smaller font size for very small screens */
+        width: 90%;
+        font-size: 0.85em;
     }
-}
-
-
-
-.button:hover {
-    background-color: #ff3c96;
-    transform: scale(1.05);
 }
 
 .balance-info, .transaction {
@@ -80,10 +80,9 @@ body {
     color: black;
 }
 
-/* Modernized input fields - Centering the text input only */
 input[type="text"], input[type="number"], select {
     width: 100%;
-    max-width: 200px; /* Limit input field width */
+    max-width: 200px;
     padding: 10px;
     margin-top: 8px;
     margin-bottom: 15px;
@@ -92,8 +91,8 @@ input[type="text"], input[type="number"], select {
     font-size: 1em;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    margin-left: auto;  /* Centers input fields horizontally */
-    margin-right: auto; /* Centers input fields horizontally */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="text"]:focus, input[type="number"]:focus, select:focus {
@@ -102,7 +101,6 @@ input[type="text"]:focus, input[type="number"]:focus, select:focus {
     outline: none;
 }
 
-/* Labels */
 label {
     font-size: 0.9em;
     color: #333;
@@ -110,7 +108,6 @@ label {
     margin-bottom: 5px;
 }
 
-/* Page title */
 h2 {
     color: #333;
     font-size: 1.5em;
@@ -118,7 +115,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Transaction item colors based on type */
 .transaction span.income {
     color: green;
 }
@@ -127,7 +123,6 @@ h2 {
     color: red;
 }
 
-/* Home button styles */
 .home-btn {
     background-color: #4CAF50;
     color: white;
@@ -137,16 +132,11 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 20px;
+    display: inline-block;
+    margin-left: 0;
     transition: background-color 0.3s;
-    /* Explicitly align the Home button to the left */
-    display: inline-block; /* Makes the button an inline block */
-    margin-left: 0;  /* Ensure the home button is aligned left */
 }
 
-/* Hover effect for home button */
 .home-btn:hover {
     background-color: #45a049;
 }
-
-/* Ensure responsiveness for smaller devices */
-
