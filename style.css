@@ -29,7 +29,7 @@ body {
 
 .button {
     background-color: #ff66b2;
-    width: 70%; /* 50% width of its container */
+    width: 50%; /* 50% width of its container */
     color: white;
     padding: 12px 20px;
     border-radius: 10px;
